@@ -115,8 +115,8 @@ class Place(models.Model):
     neighborhood = models.ForeignKey(Neighborhood, blank=True, null=True)
     coordinate = models.ForeignKey(Coordinate)
     postal_code = models.CharField(_('postal code'), max_length=10, blank=True, null=True)
-    street_name = models.CharField(_('street name'), max_length=255)
-    street_number = models.CharField(_('street number'), max_length=24)
+    street_name = models.CharField(_('street name'), max_length=255, blank=True)
+    street_number = models.CharField(_('street number'), max_length=24, blank=True)
 
     @property
     def country(self):
